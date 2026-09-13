@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="pannellum.css"/>
+  <script src="pannellum.js"></script>
+  <style>html, body, #panorama { width:100%; height:100vh; margin:0; }</style>
+</head>
+<body>
+  <div id="panorama"></div>
+  <script>
+    pannellum.viewer('panorama', {
+      default: {
+        firstScene: 'scene1',
+        sceneFadeDuration: 1000,
+        autoLoad: true,
+        hotSpotDebug: true,
+      },
+      scenes: {
+
+        scene1: {
+          title: 'Entrée - Gare routière',
+          panorama: 'pano8.jpg',
+          hotSpots: [
+            {
+              pitch: -5,
+              yaw: -60,
+              type: 'scene',
+              sceneId: 'scene2',
+              text: 'Suivant'
+            }
+          ]
+        },
+
+        scene2: {
+          title: 'Salle d\'attente',
+          panorama: 'pano9.jpg',
+          hotSpots: [
+            {
+              pitch: 16,
+              yaw: 82,
+              type: 'scene',
+              sceneId: 'scene1',
+              text: 'Précédent'
+            },
+            {
+              pitch: 0,
+              yaw: -31,
+              type: 'scene',
+              sceneId: 'scene3',
+              text: 'Suivant'
+            }
+          ]
+        },
+
+        scene3: {
+          title: 'Réserve',
+          panorama: 'pano11.jpg',
+          hotSpots: [
+            {
+              pitch: -1,
+              yaw: -38,
+              type: 'scene',
+              sceneId: 'scene2',
+              text: 'Précédent'
+            },
+            {
+              pitch: 0,
+              yaw: -119,
+              type: 'scene',
+              sceneId: 'scene4',
+              text: 'Suivant'
+            }
+          ]
+        },
+
+        scene4: {
+          title: 'Cuisine',
+          panorama: 'pano10.jpg',
+          hotSpots: [
+            {
+              pitch: 0,
+              yaw: 64,
+              type: 'scene',
+              sceneId: 'scene3',
+              text: 'Précédent'
+            },
+            {
+              pitch: 0,
+              yaw: -106,
+              type: 'scene',
+              sceneId: 'scene5',
+              text: 'Suivant'
+            }
+          ]
+        },
+
+        scene5: {
+          title: 'Extérieur - Bâtiment',
+          panorama: 'pano7.jpg',
+          hotSpots: [
+            {
+              pitch: -3,
+              yaw: -34,
+              type: 'scene',
+              sceneId: 'scene4',
+              text: 'Précédent'
+            },
+            {
+              pitch: 1,
+              yaw: 27,
+              type: 'scene',
+              sceneId: 'scene6',
+              text: 'Suivant'
+            }
+          ]
+        },
+
+        scene6: {
+          title: 'Couloir carrelé vert',
+          panorama: 'pano3.jpg',
+          hotSpots: [
+            {
+              pitch: 2,
+              yaw: -42,
+              type: 'scene',
+              sceneId: 'scene5',
+              text: 'Précédent'
+            },
+            {
+              pitch: -0,
+              yaw: 62,
+              type: 'scene',
+              sceneId: 'scene7',
+              text: 'Suivant'
+            }
+          ]
+        },
+
+        scene7: {
+          title: 'Salle de bain verte',
+          panorama: 'pano4.jpg',
+          hotSpots: [
+            {
+              pitch: -11,
+              yaw: -104,
+              type: 'scene',
+              sceneId: 'scene6',
+              text: 'Précédent'
+            },
+            {
+              pitch: 0,
+              yaw: 86,
+              type: 'scene',
+              sceneId: 'scene8',
+              text: 'Suivant'
+            }
+          ]
+        },
+
+        scene8: {
+          title: 'Sanitaires - Couloir',
+          panorama: 'pano1.jpg',
+          hotSpots: [
+            {
+              pitch: 0,
+              yaw: -91,
+              type: 'scene',
+              sceneId: 'scene7',
+              text: 'Précédent'
+            },
+            {
+              pitch: -5,
+              yaw: -71,
+              type: 'scene',
+              sceneId: 'scene9',
+              text: 'Suivant'
+            }
+          ]
+        },
+
+        scene9: {
+          title: 'Sanitaires',
+          panorama: 'pano2.jpg',
+          hotSpots: [
+            {
+              pitch: -6,
+              yaw: 100,
+              type: 'scene',
+              sceneId: 'scene8',
+              text: 'Précédent'
+            },
+            {
+              pitch: -25,
+              yaw: -61,
+              type: 'scene',
+              sceneId: 'scene10',
+              text: 'Suivant'
+            }
+          ]
+        },
+
+        scene10: {
+          title: 'Bureau',
+          panorama: 'pano5.jpg',
+          hotSpots: [
+            {
+              pitch: -4,
+              yaw: -39,
+              type: 'scene',
+              sceneId: 'scene9',
+              text: 'Précédent'
+            },
+            {
+              pitch: 0,
+              yaw: -38,
+              type: 'scene',
+              sceneId: 'scene11',
+              text: 'Suivant'
+            }
+          ]
+        },
+
+        scene11: {
+          title: 'Place extérieure',
+          panorama: 'pano6.jpg',
+          hotSpots: [
+            {
+              pitch: -4,
+              yaw: -174,
+              type: 'scene',
+              sceneId: 'scene10',
+              text: 'Précédent'
+            },
+            {
+              pitch: 0,
+              yaw: 0,
+              type: 'scene',
+              sceneId: 'scene1',
+              text: 'Suivant'
+            }
+          ]
+        }
+
+      }
+    });
+  </script>
+</body>
+</html>
